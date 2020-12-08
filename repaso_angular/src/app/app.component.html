@@ -1,0 +1,20 @@
+{{ title }}
+
+<p *ngIf="!mostrar">Estado texto a mostrar: {{ mostrar }} </p>
+
+<h1>Menú 1</h1>
+<ul *ngFor="let menuItem of lista">
+  <li>{{ menuItem }}</li>
+</ul>
+
+<h1>Menú 2</h1>
+<ul *ngFor="let menuItem of lista; let i = index">
+  <li>{{ i }} {{ menuItem }}</li>
+</ul>
+
+<div *ngIf="!mostrar">
+  <h1>Menú 3</h1>
+  <ul *ngFor="let menuItem of lista; let i = index">
+    <li>{{ i + 1 }} {{ menuItem }}</li>
+  </ul>
+</div>
